@@ -4,7 +4,4 @@ _site
 
 # zurb foundation gitignore
 /bower_components/*
-/.sass-cache/*
 *.DS_Store
-/stylesheets/*
-
