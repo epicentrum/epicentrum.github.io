@@ -1,5 +1,5 @@
 @import "settings";
-@import "../bower_components/foundation/scss/foundation";
+//@import "../bower_components/foundation/scss/foundation";
 
 // Or selectively include components
 // @import
@@ -38,3 +38,11 @@
 //   "foundation/components/type",
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
+
+// Components I decided to use
+@import "../bower_components/foundation/scss/foundation/components/grid";
+
+body {
+  background: #000 url(../img/bg.png) top/contain no-repeat;
+  color: #fff;
+}
