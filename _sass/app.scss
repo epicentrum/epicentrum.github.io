@@ -42,7 +42,75 @@
 // Components I decided to use
 @import "../bower_components/foundation/scss/foundation/components/grid";
 
-body {
-  background: #000 url(../img/bg.png) top/contain no-repeat;
-  color: #fff;
+// Styles for my app
+@media #{$small-up} {
+  $red: #c42525;
+
+  body {
+    background: #000 url(../img/bg.png) top/contain no-repeat; // ### cover?
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5vw;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  h1 {
+    font-family: 'Exo';
+    font-size: rem-calc(36);
+    font-weight: 400;
+    line-height: 1.2;
+  }
+
+  em {
+    color: $red;
+    font-style: normal;
+  }
+
+  footer {
+    color: #333;
+    & a {
+      color: #333;
+      transition: color 250ms;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  #logo {
+    width: rem-calc(100);
+  }
+
+  %button {
+    color: #fff;
+    display: inline-block;
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 700;
+    padding: rem-calc(23) rem-calc(45);
+    text-align: center;
+    text-transform: uppercase;
+    transition: 250ms; // ## add some timing-function (easing)?
+  }
+
+  .button-filled {
+    @extend %button;
+    background: $red;
+    &:hover {
+      background: lighten($red, 7%);
+    }
+  }
+
+  .button-transparent {
+    @extend %button;
+    background: transparent;
+    box-shadow: inset 0 0 0 4px #fff;
+    &:hover {
+      background: #fff;
+      color: #000;
+    }
+  }
 }
