@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Epicentrum &mdash; koło naukowe studentów kierunku elektroniczne przetwarzanie informacji</title>
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="bower_components/slideout.js/index.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=latin,latin-ext">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Exo&subset=latin,latin-ext">
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -13,20 +14,49 @@
   </head>
 
   <body>
-    <header>
-      <img src="img/logo.svg" id="logo" alt="Logo Epicentrum">
-      Epicentrum
-    </header>
+    <nav id="menu">
+      <h2>Menu</h2>
+      <ul>
+        <li><a href="">O nas</a></li>
+        <li><a href="">Projekty</a></li>
+        <li><a href="">Pliki</a></li>
+        <li><a href="">Kontakt</a></li>
+      </ul>
+    </nav>
 
-    <section>
-      <h1><em>Epicentrum</em> to koło naukowe<br>zrzeszające studentów kierunku<br>elektroniczne przetwarzanie informacji.</h1>
-      <a href="#more" class="button-filled">Dowiedz się więcej</a>
-      <a href="#join" class="button-transparent">Dołącz do nas</a>
-    </section>
+    <main id="panel">
+      <header>
+        <img src="img/logo.svg" id="logo" alt="Logo Epicentrum">
+        Epicentrum
+        <button class="toggle-button right">☰</button>
+      </header>
 
-    <footer>
-      <p>&copy; 2015 Made with love by <a href="http://rafaltrzop.com/">rafaltrzop.com</a></p>
-    </footer>
+      <section>
+        <h1><em>Epicentrum</em> to koło naukowe<br>zrzeszające studentów kierunku<br>elektroniczne przetwarzanie informacji.</h1>
+        <a href="#more" class="button-filled">Dowiedz się więcej</a>
+        <a href="#join" class="button-transparent">Dołącz do nas</a>
+      </section>
+
+      <footer>
+        <p>&copy; 2015 Made with love by <a href="http://rafaltrzop.com/">rafaltrzop.com</a></p>
+      </footer>
+    </main>
+
+    <script src="bower_components/slideout.js/dist/slideout.min.js"></script>
+    <script>
+      var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70
+        //'side': "right" // this option probably will be added in slideout.js v0.1.8
+      });
+
+      // Toggle button
+      document.querySelector('.toggle-button').addEventListener('click', function() {
+        slideout.toggle();
+      });
+    </script>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>

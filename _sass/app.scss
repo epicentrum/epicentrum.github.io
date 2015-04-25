@@ -46,11 +46,20 @@
 @media #{$small-up} {
   $red: #c42525;
 
+  html {
+    height: auto; // reset foundation html { height: 100%; } - it breaks slideout mobile menu (page jumps to the top)
+  }
+
   body {
-    background: #000 url(../img/bg.png) top/contain no-repeat; // ### cover?
+    background: #000; // background for iOS (it's visible when you try to scroll further than content of the page)
     color: #fff;
     font-family: 'Open Sans', sans-serif;
-    padding: 5vw;
+  }
+
+  #panel {
+    background: #000 url(../img/bg.png) top/contain no-repeat;
+    padding: 5vw; // ### adjust later
+    min-height: 100vh; // fix for too short pages using slideout menu
   }
 
   a {
@@ -81,12 +90,16 @@
   }
 
   #logo {
-    width: rem-calc(100);
+    width: rem-calc(70);
+  }
+
+  #menu {
+    background: #fff;
+    color: $red;
   }
 
   %button {
     color: #fff;
-    display: inline-block;
     font-family: 'Open Sans';
     font-size: 18px;
     font-weight: 700;
@@ -106,11 +119,17 @@
 
   .button-transparent {
     @extend %button;
-    background: transparent;
     box-shadow: inset 0 0 0 4px #fff;
     &:hover {
       background: #fff;
       color: #000;
     }
+  }
+}
+
+@media #{$small-only} {
+  .button-filled,
+  .button-transparent {
+    display: block;
   }
 }
