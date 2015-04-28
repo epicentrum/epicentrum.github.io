@@ -14,25 +14,26 @@
   </head>
 
   <body>
-    <nav id="menu">
+    <nav id="slideout-menu">
       <h2>Menu</h2>
       <ul>
-        <li><a href="">O nas</a></li>
-        <li><a href="">Projekty</a></li>
-        <li><a href="">Pliki</a></li>
-        <li><a href="">Kontakt</a></li>
+        <li><a href="#o_nas">O nas</a></li>
+        <li><a href="#projekty">Projekty</a></li>
+        <li><a href="#pliki">Pliki</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </nav>
 
-    <main id="panel">
-      <header>
-        <img src="img/logo.svg" id="logo" alt="Logo Epicentrum">
-        Epicentrum
-        <button class="toggle-button right">☰</button>
+    <main id="slideout-panel">
+      <header class="clearfix">
+        <a href="index.html"><img src="img/logo.svg" id="logo" class="left" alt="Logo Epicentrum"></a>
+        <span id="logotype">Epicentrum</span>
+        <button class="slideout-toggle right">&#9776;</button>
       </header>
 
       <section>
-        <h1><em>Epicentrum</em> to koło naukowe<br>zrzeszające studentów kierunku<br>elektroniczne przetwarzanie informacji.</h1>
+        <h1><em>Epicentrum</em> to koło naukowe<br> zrzeszające studentów kierunku<br> elektroniczne przetwarzanie informacji.</h1>
+        <p>Zajmujemy się projektowaniem interfejsów oraz badaniem i opisywaniem zjawisk związanych z używaniem systemów komputerowych przez ludzi. Projektujemy aplikacje zorientowane na użytkownika zwracając przy tym szczególną uwagę na design, user experience oraz wysoką użyteczność i dostępność produktu końcowego. Działamy przy Wydziale Zarządzania i Komunikacji Społecznej Uniwersytetu Jagiellońskiego.</p>
         <a href="#more" class="button-filled">Dowiedz się więcej</a>
         <a href="#join" class="button-transparent">Dołącz do nas</a>
       </section>
@@ -45,15 +46,15 @@
     <script src="bower_components/slideout.js/dist/slideout.min.js"></script>
     <script>
       var slideout = new Slideout({
-        'panel': document.getElementById('panel'),
-        'menu': document.getElementById('menu'),
+        'panel': document.getElementById('slideout-panel'),
+        'menu': document.getElementById('slideout-menu'),
         'padding': 256,
         'tolerance': 70
         //'side': "right" // this option probably will be added in slideout.js v0.1.8
       });
 
       // Toggle button
-      document.querySelector('.toggle-button').addEventListener('click', function() {
+      document.querySelector('.slideout-toggle').addEventListener('click', function() {
         slideout.toggle();
       });
     </script>
