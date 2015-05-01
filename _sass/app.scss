@@ -43,9 +43,9 @@
 @import "../bower_components/foundation/scss/foundation/components/grid";
 
 // Styles for my app
-@media #{$small-up} {
-  $red: #c42525;
+$red: #c42525;
 
+@media #{$small-up} {
   body {
     background: #000; // background for iOS (it's visible when you try to scroll further than content of the page)
     color: #fff;
@@ -86,11 +86,6 @@
         text-decoration: none;
       }
     }
-  }
-
-  #slideout-menu {
-    background: #fff;
-    color: $red;
   }
 
   #slideout-panel {
@@ -147,12 +142,6 @@
     display: none;
   }
 
-  .button-filled,
-  .button-transparent {
-    display: block;
-    margin-bottom: rem-calc(16);
-  }
-
   .slideout-toggle {
     background: none;
     border: none;
@@ -161,6 +150,32 @@
     font-size: rem-calc(36);
     height: 100%;
     width: rem-calc(50);
+  }
+
+  #slideout-menu {
+    background: #fff;
+    & ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    & a {
+      color: #000;
+      // font-weight: 700;
+      // text-transform: uppercase;
+      display: block;
+      padding: 5vw;
+      &:hover {
+        color: #fff;
+        background: #000;
+      }
+    }
+  }
+
+  .button-filled,
+  .button-transparent {
+    display: block;
+    margin-bottom: rem-calc(16);
   }
 
   footer p {
