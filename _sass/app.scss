@@ -53,6 +53,11 @@ $red: #c42525;
     font-size: rem-calc(16);
   }
 
+  header {
+    height: rem-calc(50);
+    line-height: rem-calc(55);
+  }
+
   a {
     text-decoration: none;
   }
@@ -94,6 +99,34 @@ $red: #c42525;
     padding: 5vw;
   }
 
+  .slideout-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: rem-calc(36);
+    height: 100%;
+    width: rem-calc(50);
+  }
+
+  #slideout-menu {
+    background: #fff;
+    & ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+    & a {
+      color: #000;
+      display: block;
+      padding: 5vw;
+      &:hover {
+        color: #fff;
+        background: #000;
+      }
+    }
+  }
+
   #logo {
     height: 100%;
   }
@@ -132,44 +165,11 @@ $red: #c42525;
   }
 
   header {
-    height: rem-calc(50);
-    line-height: rem-calc(50);
-    margin-bottom: 7vw;
     text-align: center;
   }
 
   h1 br {
     display: none;
-  }
-
-  .slideout-toggle {
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    font-size: rem-calc(36);
-    height: 100%;
-    width: rem-calc(50);
-  }
-
-  #slideout-menu {
-    background: #fff;
-    & ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    & a {
-      color: #000;
-      // font-weight: 700;
-      // text-transform: uppercase;
-      display: block;
-      padding: 5vw;
-      &:hover {
-        color: #fff;
-        background: #000;
-      }
-    }
   }
 
   .button-filled,
@@ -185,9 +185,13 @@ $red: #c42525;
 }
 
 @media #{$medium-up} {
-  .button-filled,
-  .button-transparent {
-    font-size: rem-calc(18);
+  header {
+    height: rem-calc(70);
+    line-height: rem-calc(82);
+  }
+
+  h1 {
+    margin-bottom: rem-calc(16);
   }
 
   h1,
@@ -196,6 +200,24 @@ $red: #c42525;
   }
 
   #logo {
+    margin-right: rem-calc(30);
+  }
+
+  .button-filled,
+  .button-transparent {
+    display: inline-block;
+    font-size: rem-calc(18);
+    margin-right: rem-calc(16);
+  }
+
+  .slideout-toggle {
     width: rem-calc(70);
+  }
+}
+
+@media #{$large-up} {
+  #slideout-panel {
+    margin-top: rem-calc(50);
+    padding: 0;
   }
 }
