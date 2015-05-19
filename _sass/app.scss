@@ -127,6 +127,10 @@ $red: #c42525;
     }
   }
 
+  .slideout-menu {
+    left: auto !important; // necessary for right side slideout menu
+  }
+
   #logo {
     height: 100%;
   }
