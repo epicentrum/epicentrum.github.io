@@ -40,6 +40,7 @@
 //   "foundation/components/visibility";
 
 // Components I decided to use
+@import "../bower_components/foundation/scss/foundation/components/block-grid";
 @import "../bower_components/foundation/scss/foundation/components/grid";
 @import "../bower_components/foundation/scss/foundation/components/visibility";
 
@@ -197,10 +198,10 @@ $grey: #4d4d4d;
   }
 
   h1 {
+    font-size: rem-calc(32);
     margin-bottom: rem-calc(16);
   }
 
-  h1,
   #logotype {
     font-size: rem-calc(36);
   }
@@ -212,7 +213,7 @@ $grey: #4d4d4d;
   .button-filled,
   .button-transparent {
     display: inline-block;
-    font-size: rem-calc(18);
+    font-size: rem-calc(16);
     margin-right: rem-calc(16);
   }
 
@@ -232,6 +233,7 @@ $grey: #4d4d4d;
     padding: 0;
     & li {
       display: inline;
+      text-align: center;
       & a {
         //display: inline-block; // ### adjust hover space
         //line-height: rem-calc(20); // ### adjust
@@ -239,7 +241,6 @@ $grey: #4d4d4d;
         color: $grey;
         font-size: rem-calc(18);
         font-weight: 700;
-        margin-left: rem-calc(100); // ### adjust
         text-transform: uppercase;
         transition: color 150ms ease;
         &:hover {
