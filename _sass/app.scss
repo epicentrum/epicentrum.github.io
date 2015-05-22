@@ -41,9 +41,11 @@
 
 // Components I decided to use
 @import "../bower_components/foundation/scss/foundation/components/grid";
+@import "../bower_components/foundation/scss/foundation/components/visibility";
 
 // Styles for my app
 $red: #c42525;
+$grey: #4d4d4d;
 
 @media #{$small-up} {
   body {
@@ -83,9 +85,9 @@ $red: #c42525;
   }
 
   footer {
-    color: #333;
+    color: $grey;
     & a {
-      color: #333;
+      color: $grey;
       text-decoration: underline;
       &:hover {
         text-decoration: none;
@@ -221,7 +223,29 @@ $red: #c42525;
 
 @media #{$large-up} {
   #slideout-panel {
-    margin-top: rem-calc(50);
+    padding: rem-calc(50);
+  }
+
+  #top-nav ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
+    & li {
+      display: inline;
+      & a {
+        //display: inline-block; // ### adjust hover space
+        //line-height: rem-calc(20); // ### adjust
+        //text-shadow: 0 0 3px #000; // ### adds contrast
+        color: $grey;
+        font-size: rem-calc(18);
+        font-weight: 700;
+        margin-left: rem-calc(100); // ### adjust
+        text-transform: uppercase;
+        transition: color 150ms ease;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
   }
 }
