@@ -96,13 +96,13 @@ $grey: #4d4d4d;
     }
   }
 
-  #slideout-panel {
+  main#slideout-panel {
     background: #000 url(../img/bg.png) top/contain no-repeat;
     min-height: 100vh; // fix for too short pages (slideout menu)
     padding: 5vw;
   }
 
-  .slideout-toggle {
+  button#slideout-toggle {
     background: none;
     border: none;
     color: #fff;
@@ -112,7 +112,7 @@ $grey: #4d4d4d;
     width: rem-calc(50);
   }
 
-  #slideout-menu {
+  nav#slideout-menu {
     background: #fff;
     & ul {
       list-style-type: none;
@@ -134,7 +134,7 @@ $grey: #4d4d4d;
     left: auto !important; // necessary for right side slideout menu
   }
 
-  #logo {
+  img#logo {
     height: 100%;
   }
 
@@ -206,11 +206,11 @@ $grey: #4d4d4d;
     font-size: rem-calc(36);
   }
 
-  #logo {
+  img#logo {
     margin-right: rem-calc(30);
   }
 
-  #welcome-text {
+  p#welcome-text {
     width: rem-calc(570);
   }
 
@@ -221,17 +221,17 @@ $grey: #4d4d4d;
     margin-right: rem-calc(16);
   }
 
-  .slideout-toggle {
+  button#slideout-toggle {
     width: rem-calc(70);
   }
 }
 
 @media #{$large-up} {
-  #slideout-panel {
+  main#slideout-panel {
     padding: rem-calc(50);
   }
 
-  #top-nav ul {
+  nav#top-menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -239,9 +239,6 @@ $grey: #4d4d4d;
       display: inline;
       text-align: center;
       & a {
-        //display: inline-block; // ### adjust hover space
-        //line-height: rem-calc(20); // ### adjust
-        //text-shadow: 0 0 3px #000; // ### adds contrast
         color: $grey;
         font-size: rem-calc(18);
         font-weight: 700;
