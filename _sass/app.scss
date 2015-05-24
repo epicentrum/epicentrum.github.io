@@ -210,6 +210,10 @@ $grey: #4d4d4d;
     margin-right: rem-calc(30);
   }
 
+  #welcome-text {
+    width: rem-calc(570);
+  }
+
   .button-filled,
   .button-transparent {
     display: inline-block;
