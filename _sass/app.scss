@@ -97,7 +97,7 @@ $grey: #4d4d4d;
   }
 
   main#slideout-panel {
-    background: #000 url(../img/bg.png) top/contain no-repeat;
+    background: #000 url(../img/bg.png) top/cover no-repeat;
     min-height: 100vh; // fix for too short pages (slideout menu)
     padding: 5vw;
   }
@@ -199,6 +199,7 @@ $grey: #4d4d4d;
 
   h1 {
     font-size: rem-calc(32);
+    margin-top: rem-calc(200); // ### adjust later
     margin-bottom: rem-calc(16);
   }
 
