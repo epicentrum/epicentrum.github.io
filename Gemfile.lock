@@ -69,3 +69,6 @@ PLATFORMS
 DEPENDENCIES
   jekyll
   sass (~> 3.4.0)
+
+BUNDLED WITH
+   1.10.2
