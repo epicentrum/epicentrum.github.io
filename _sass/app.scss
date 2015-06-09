@@ -199,7 +199,6 @@ $grey: #4d4d4d;
 
   h1 {
     font-size: rem-calc(32);
-    margin-top: rem-calc(200); // ### adjust later
     margin-bottom: rem-calc(16);
   }
 
@@ -225,11 +224,16 @@ $grey: #4d4d4d;
   button#slideout-toggle {
     width: rem-calc(70);
   }
+
+  footer p {
+    margin-bottom: 0;
+  }
 }
 
 @media #{$large-up} {
   main#slideout-panel {
     padding: rem-calc(50);
+    padding-bottom: rem-calc(90);
   }
 
   nav#top-menu ul {
@@ -250,5 +254,14 @@ $grey: #4d4d4d;
         }
       }
     }
+  }
+
+  h1 {
+    margin-top: rem-calc(200);
+  }
+
+  footer p {
+    position: absolute;
+    bottom: rem-calc(50);
   }
 }
