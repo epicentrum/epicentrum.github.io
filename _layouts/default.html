@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="no-js" lang="pl">
+  {% include head.html %}
+
+  <body>
+    <nav id="slideout-menu">
+      <ul>
+        {% include nav.html %}
+      </ul>
+    </nav>
+
+    <main id="slideout-panel">
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+    </main>
+
+    <script src="bower_components/slideout.js/dist/slideout.min.js"></script>
+    <script>
+      var slideout = new Slideout({
+        'panel': document.getElementById('slideout-panel'),
+        'menu': document.getElementById('slideout-menu'),
+        'padding': 256,
+        'tolerance': 70,
+        'side': "right",
+        'touch': false
+      });
+
+      // Toggle button
+      document.querySelector('#slideout-toggle').addEventListener('click', function() {
+        slideout.toggle();
+      });
+    </script>
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
