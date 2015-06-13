@@ -48,7 +48,36 @@
 $red: #c42525;
 $grey: #4d4d4d;
 
+@mixin selection-color($txt, $bg) {
+  background: $bg;
+  color: $txt;
+}
+
 @media #{$small-up} {
+  ::selection {
+    @include selection-color(#fff, #b0b0b0);
+  }
+
+  ::-moz-selection {
+    @include selection-color(#fff, #b0b0b0);
+  }
+
+  h1::selection {
+    @include selection-color(#fff, $red);
+  }
+
+  h1::-moz-selection {
+    @include selection-color(#fff, $red);
+  }
+
+  em::selection {
+    @include selection-color(#fff, $red);
+  }
+
+  em::-moz-selection {
+    @include selection-color(#fff, $red);
+  }
+
   body {
     background: #000; // background for iOS (it's visible when you try to scroll further than content of the page)
     color: #fff;
