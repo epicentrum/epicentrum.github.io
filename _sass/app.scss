@@ -232,6 +232,10 @@ $grey: #4d4d4d;
     margin-bottom: rem-calc(16);
   }
 
+  main#slideout-panel {
+    padding-bottom: 9vw;
+  }
+
   #logotype {
     font-size: rem-calc(36);
   }
@@ -257,6 +261,8 @@ $grey: #4d4d4d;
 
   footer p {
     margin-bottom: 0;
+    position: absolute;
+    bottom: 5vw;
   }
 }
 
@@ -291,7 +297,6 @@ $grey: #4d4d4d;
   }
 
   footer p {
-    position: absolute;
     bottom: rem-calc(50);
   }
 }
