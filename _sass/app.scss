@@ -79,10 +79,14 @@ $grey: #4d4d4d;
   }
 
   body {
-    background: #000; // background for iOS (it's visible when you try to scroll further than content of the page)
-    color: #fff;
+    color: #000; // ### adjust later
     font-family: 'Open Sans', sans-serif;
     font-size: rem-calc(16);
+  }
+
+  body#landing-page {
+    background: #000; // background for iOS (it's visible when you try to scroll further than content of the page)
+    color: #fff;
   }
 
   header {
@@ -126,15 +130,19 @@ $grey: #4d4d4d;
   }
 
   main#slideout-panel {
-    background: #000 url(../img/bg.jpg) top/cover no-repeat;
+    background: #e9efe8; // ### adjust later
     min-height: 100vh; // fix for too short pages (slideout menu)
     padding: 5vw;
+  }
+
+  #landing-page main#slideout-panel {
+    background: #000 url(../img/bg.jpg) top/cover no-repeat;
   }
 
   button#slideout-toggle {
     background: none;
     border: none;
-    color: #fff;
+    color: #000; // ### adjust later
     cursor: pointer;
     font-size: rem-calc(36);
     height: 100%;
@@ -142,17 +150,32 @@ $grey: #4d4d4d;
     width: rem-calc(50);
   }
 
+  #landing-page button#slideout-toggle {
+    color: #fff;
+  }
+
   nav#slideout-menu {
-    background: #fff;
+    background: #000;
     & ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
     }
     & a {
-      color: #000;
+      color: #fff;
       display: block;
       padding: 5vw;
+      &:hover {
+        color: #000;
+        background: #fff;
+      }
+    }
+  }
+
+  #landing-page nav#slideout-menu {
+    background: #fff;
+    & a {
+      color: #000;
       &:hover {
         color: #fff;
         background: #000;
@@ -292,7 +315,7 @@ $grey: #4d4d4d;
     }
   }
 
-  h1 {
+  #landing-page h1 {
     margin-top: rem-calc(200);
   }
 
