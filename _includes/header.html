@@ -1,5 +1,11 @@
 <header class="row large-collapse clearfix">
-  <a href="index.html"><img src="img/logo.svg" id="logo" class="left" alt="Logo Epicentrum"></a>
+  <a href="index.html">
+    {% if page.layout == 'index' %}
+      <img src="img/logo_white.svg" id="logo" class="left" alt="Logo Epicentrum">
+    {% else %}
+      <img src="img/logo_black.svg" id="logo" class="left" alt="Logo Epicentrum">
+    {% endif %}
+  </a>
   <span id="logotype">Epicentrum</span>
   <button id="slideout-toggle" class="right hide-for-large-up">&#9776;</button>
   <nav id="top-menu" class="large-6 columns right hide-for-small-only hide-for-medium-only">
