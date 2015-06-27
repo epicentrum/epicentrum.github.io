@@ -93,16 +93,24 @@ $light-grey: #e9efe8;
   header {
     height: rem-calc(50);
     line-height: rem-calc(55);
+    overflow: hidden;
   }
 
   a {
     text-decoration: none;
   }
 
+  section p a {
+    color: $red;
+    &:hover {
+      color: lighten($red, 7%);
+    }
+  }
+
   h1,
   #logotype {
     font-family: 'Exo';
-    font-weight: 400;
+    font-weight: 500;
     line-height: 1.2;
   }
 
@@ -115,7 +123,6 @@ $light-grey: #e9efe8;
 
   #logotype {
     font-size: rem-calc(24);
-    font-weight: 500;
   }
 
   em {
@@ -150,7 +157,7 @@ $light-grey: #e9efe8;
     color: #000; // ### adjust later
     cursor: pointer;
     font-size: rem-calc(36);
-    height: 100%;
+    height: rem-calc(50);
     outline: 0;
     width: rem-calc(50);
   }
@@ -188,12 +195,16 @@ $light-grey: #e9efe8;
     }
   }
 
+  #map-canvas {
+    height: rem-calc(400); // ### adjust later
+  }
+
   .slideout-menu {
     left: auto !important; // necessary for right side slideout menu
   }
 
   img#logo {
-    height: 100%;
+    height: rem-calc(50);
   }
 
   %button {
@@ -243,11 +254,11 @@ $light-grey: #e9efe8;
   .button-filled,
   .button-transparent {
     display: block;
-    margin-bottom: rem-calc(16);
+    margin-top: rem-calc(16);
   }
 
   footer p {
-    margin: 0;
+    margin-bottom: 0;
     text-align: center;
   }
 }
@@ -259,12 +270,13 @@ $light-grey: #e9efe8;
   }
 
   h1 {
+    font-weight: 400;
     font-size: rem-calc(27);
     margin: rem-calc(42) 0 rem-calc(10);
   }
 
   main#slideout-panel {
-    padding-bottom: 9vw;
+    padding-bottom: 10vw;
   }
 
   #logotype {
@@ -272,6 +284,7 @@ $light-grey: #e9efe8;
   }
 
   img#logo {
+    height: rem-calc(70);
     margin-right: rem-calc(30);
   }
 
@@ -287,6 +300,7 @@ $light-grey: #e9efe8;
   }
 
   button#slideout-toggle {
+    height: rem-calc(70);
     width: rem-calc(70);
   }
 
@@ -302,7 +316,7 @@ $light-grey: #e9efe8;
     font-size: rem-calc(32);
   }
 
-  #landing-page h1 {
+  h1#landing-page {
     margin-top: rem-calc(200);
   }
 
@@ -333,5 +347,6 @@ $light-grey: #e9efe8;
 
   footer p {
     bottom: rem-calc(50);
+    margin-left: rem-calc(15);
   }
 }
