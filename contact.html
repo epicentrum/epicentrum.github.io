@@ -1,16 +1,65 @@
 ---
-layout: subpage
+layout: index
 ---
-<section class="row">
-  <h1>Kontakt</h1>
-  <p>Koło Naukowe Epicentrum<br>
-  Katedra Lingwistyki Komputerowej, pok. 3.232<br>
-  Wydział Zarządzania i Komunikacji Społecznej UJ<br>
-  ul. prof. Stanisława Łojasiewicza 4<br>
-  30-348 Kraków</p>
+<section>
+  <div class="row small-collapse large-uncollapse">
+    <div class="large-4 columns">
+      <h1>Kontakt</h1>
+      <p>
+        Chcesz do nas dołączyć? Masz pomysł na spotkanie?
+        Chcesz podzielić się swoją wiedzą z innymi?
+        A może chciałbyś zostać naszym sponsorem i w ten sposób promować swoją firmę?
+        Napisz do Nas!
+      </p>
+    </div>
 
-  <h1>W Internecie</h1>
-  <p>spacer uj: http://uj.wkraj.pl/html5/player.php?id=46389<br>
-  facebook: https://www.facebook.com/kn.epicentrum<br>
-  e-mail: kn.epicentrum@gmail.com</p>
+    <div class="large-4 columns">
+      <h1>Odwiedź nas</h1>
+      <p>
+        Koło Naukowe Epicentrum<br>
+        Katedra Lingwistyki Komputerowej, pok. 3.232<br>
+        Wydział Zarządzania i Komunikacji Społecznej UJ<br>
+        ul. prof. Stanisława Łojasiewicza 4<br>
+        30-348 Kraków
+      </p>
+    </div>
+
+    <div class="large-4 columns">
+      <h1>Skontaktuj się</h1>
+      <p>
+        E-mail: <a href="mailto:kn.epicentrum@gmail.com">kn.epicentrum@gmail.com</a><br>
+        Facebook: <a href="www.facebook.com/kn.epicentrum">fb.com/kn.epicentrum</a><br>
+        Strona kierunku EPI: <a href="http://www.epi.uj.edu.pl">epi.uj.edu.pl</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="https://maps.googleapis.com/maps/api/js"></script>
+  <script>
+    function initialize() {
+      var myLatlng = new google.maps.LatLng(50.029939, 19.908307);
+      var mapCanvas = document.getElementById('map-canvas');
+      var mapOptions = {
+        center: myLatlng,
+        zoom: 17,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        disableDefaultUI: true
+      }
+
+      var map = new google.maps.Map(mapCanvas, mapOptions)
+
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map
+      });
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+
+  <div class="row small-collapse large-uncollapse">
+    <div class="large-12 columns">
+      <div id="map-canvas"></div>
+    </div>
+  </div>
 </section>
