@@ -94,6 +94,7 @@ $light-grey: #e9efe8;
     height: rem-calc(50);
     line-height: rem-calc(55);
     overflow: hidden;
+    margin-bottom: rem-calc(16) !important; // overwrite margin-bottom: 0 from .row class
   }
 
   a {
@@ -196,7 +197,7 @@ $light-grey: #e9efe8;
   }
 
   #google-map-canvas {
-    height: rem-calc(400); // ### adjust later
+    height: rem-calc(400);
   }
 
   .slideout-menu {
@@ -245,7 +246,7 @@ $light-grey: #e9efe8;
   }
 
   h1 {
-    margin: rem-calc(24) 0 rem-calc(9);
+    margin: rem-calc(9) 0 rem-calc(8);
     & br {
       display: none;
     }
@@ -272,7 +273,7 @@ $light-grey: #e9efe8;
   h1 {
     font-weight: 400;
     font-size: rem-calc(27);
-    margin: rem-calc(42) 0 rem-calc(10);
+    margin: rem-calc(24) 0 rem-calc(10);
   }
 
   main#slideout-panel {
