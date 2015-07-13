@@ -6,7 +6,7 @@ $(document).foundation();
 var slideout = new Slideout({
   'panel': document.getElementById('slideout-panel'),
   'menu': document.getElementById('slideout-menu'),
-  'padding': 256,
+  'padding': 225,
   'tolerance': 70,
   'side': "right",
   'touch': false

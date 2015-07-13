@@ -202,6 +202,7 @@ $light-grey: #e9efe8;
 
   .slideout-menu {
     left: auto !important; // necessary for right side slideout menu
+    width: rem-calc(225) !important; // must equal your slideout padding value
   }
 
   img#logo {
