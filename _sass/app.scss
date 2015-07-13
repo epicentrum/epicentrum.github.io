@@ -198,6 +198,7 @@ $light-grey: #e9efe8;
 
   #google-map-canvas {
     height: rem-calc(400);
+    margin-bottom: rem-calc(16);
   }
 
   .slideout-menu {
@@ -256,11 +257,11 @@ $light-grey: #e9efe8;
   .button-filled,
   .button-transparent {
     display: block;
-    margin-top: rem-calc(16);
+    margin-bottom: rem-calc(16);
   }
 
   footer p {
-    margin-bottom: 0;
+    margin: 0 auto;
     text-align: center;
   }
 }
