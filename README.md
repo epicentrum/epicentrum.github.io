@@ -18,4 +18,4 @@ bower update
 
 ## Running server
 
-To start jekyll server run `jekyll serve` command and then go to [http://localhost:4000](http://localhost:4000)
+To start jekyll server run `bundle exec jekyll serve` command and then go to [http://localhost:4000](http://localhost:4000)
