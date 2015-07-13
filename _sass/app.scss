@@ -131,6 +131,10 @@ $light-grey: #e9efe8;
     font-style: normal;
   }
 
+  ol {
+    list-style-type: decimal-leading-zero;
+  }
+
   footer {
     color: $dark-grey;
     & a {
