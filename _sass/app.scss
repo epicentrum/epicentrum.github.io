@@ -218,6 +218,7 @@ $light-grey: #e9efe8;
     text-align: center;
     text-transform: uppercase;
     transition: background 250ms ease;
+    margin-bottom: rem-calc(16);
   }
 
   .button-filled {
@@ -257,7 +258,6 @@ $light-grey: #e9efe8;
   .button-filled,
   .button-transparent {
     display: block;
-    margin-bottom: rem-calc(16);
   }
 
   footer p {
