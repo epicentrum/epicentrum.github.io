@@ -46,8 +46,7 @@
 
 // Styles for my app
 $red: #c42525;
-$dark-grey: #4d4d4d;
-$light-grey: #e9efe8;
+$grey: #4d4d4d;
 
 @mixin selection-color($txt, $bg) {
   background: $bg;
@@ -80,14 +79,10 @@ $light-grey: #e9efe8;
   }
 
   body {
-    color: #000; // ### adjust later
-    font-family: 'Open Sans', sans-serif;
-    font-size: rem-calc(16);
-  }
-
-  body#landing-page {
     background: #000; // background for iOS (it's visible when you try to scroll further than content of the page)
     color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem-calc(16);
   }
 
   header {
@@ -136,9 +131,9 @@ $light-grey: #e9efe8;
   }
 
   footer {
-    color: $dark-grey;
+    color: $grey;
     & a {
-      color: $dark-grey;
+      color: $grey;
       text-decoration: underline;
       &:hover {
         text-decoration: none;
@@ -147,19 +142,15 @@ $light-grey: #e9efe8;
   }
 
   main#slideout-panel {
-    background: $light-grey; // ### adjust later
+    background: #000 url(../img/bg.jpg) top/cover no-repeat;
     min-height: 100vh; // fix for too short pages (slideout menu)
     padding: 5vw;
-  }
-
-  #landing-page main#slideout-panel {
-    background: #000 url(../img/bg.jpg) top/cover no-repeat;
   }
 
   button#slideout-toggle {
     background: none;
     border: none;
-    color: #000; // ### adjust later
+    color: #fff;
     cursor: pointer;
     font-size: rem-calc(36);
     height: rem-calc(50);
@@ -167,32 +158,17 @@ $light-grey: #e9efe8;
     width: rem-calc(50);
   }
 
-  #landing-page button#slideout-toggle {
-    color: #fff;
-  }
-
   nav#slideout-menu {
-    background: #000;
+    background: #fff;
     & ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
     }
     & a {
-      color: #fff;
+      color: #000;
       display: block;
       padding: 5vw;
-      &:hover {
-        color: #000;
-        background: $light-grey;
-      }
-    }
-  }
-
-  #landing-page nav#slideout-menu {
-    background: #fff;
-    & a {
-      color: #000;
       &:hover {
         color: #fff;
         background: #000;
@@ -340,7 +316,7 @@ $light-grey: #e9efe8;
       display: inline;
       text-align: center;
       & a {
-        color: $dark-grey;
+        color: $grey;
         font-size: rem-calc(18);
         font-weight: 700;
         text-transform: uppercase;
