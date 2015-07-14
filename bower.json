@@ -1,8 +1,9 @@
 {
-  "name": "foundation-compass-app",
-  "version": "0.0.1",
+  "name": "epicentrum",
+  "version": "0.2.0",
   "private": "true",
   "dependencies": {
-    "foundation": "zurb/bower-foundation"
+    "foundation": "zurb/bower-foundation",
+    "slideout.js": "~0.1.9"
   }
 }
