@@ -135,6 +135,12 @@ $grey: #4d4d4d;
     padding-left: rem-calc(31);
   }
 
+  ul#goals {
+    margin-top: 0;
+    padding-left: rem-calc(19);
+    list-style-type: square;
+  }
+
   footer {
     color: $grey;
     & a {
