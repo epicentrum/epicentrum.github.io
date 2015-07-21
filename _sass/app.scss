@@ -90,6 +90,9 @@ $grey: #4d4d4d;
     line-height: rem-calc(55);
     overflow: hidden;
     margin-bottom: rem-calc(16) !important; // overwrite margin-bottom: 0 from .row class
+    & a {
+      color: #fff;
+    }
   }
 
   a {
