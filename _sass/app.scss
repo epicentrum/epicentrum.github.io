@@ -129,8 +129,10 @@ $grey: #4d4d4d;
     font-style: normal;
   }
 
-  ol {
+  ol#members {
     list-style-type: decimal-leading-zero;
+    margin-top: 0;
+    padding-left: rem-calc(31);
   }
 
   footer {
