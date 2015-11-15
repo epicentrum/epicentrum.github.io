@@ -19,6 +19,14 @@
 
 ## Installation
 
+Slideout is available on cdnjs
+
+```html
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.11/slideout.min.js"></script>
+```
+
+Also you can use one of many package managers
+
     $ npm install slideout
 
     $ spm install slideout
@@ -238,6 +246,27 @@ Returns `true` if the slideout is currently open, and `false` if it is closed.
 slideout.isOpen(); // true or false
 ```
 
+### Slideout.destroy();
+Cleans up the instance so another slideout can be created on the same area.
+
+```js
+slideout.destroy();
+```
+
+### Slideout.enableTouch();
+Enables opening the slideout via touch events.
+
+```js
+slideout.enableTouch();
+```
+
+### Slideout.disableTouch();
+Disables opening the slideout via touch events.
+
+```js
+slideout.disableTouch();
+```
+
 ### Slideout.on(event, listener);
 ```js
 slideout.on('open', function() { ... });
@@ -306,6 +335,24 @@ document.querySelector('.toggle-button').addEventListener('click', function() {
 // jQuery
 $('.toggle-button').on('click', function() {
     slideout.toggle();
+});
+```
+
+### How to open slideout from right side.
+
+You should define `left: auto` on the class `.slideout-menu`.
+```css
+.slideout-menu {
+  left: auto;
+}
+```
+
+Then, use the `side` option with the value `right`.
+```js
+var slideout = new Slideout({
+  'panel': document.getElementById('content'),
+  'menu': document.getElementById('menu'),
+  'side': 'right'
 });
 ```
 
