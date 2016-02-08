@@ -157,7 +157,7 @@ $grey: #4d4d4d;
   }
 
   main#slideout-panel {
-    background: #000 url(../img/bg.jpg) top/cover no-repeat;
+    background: #000 url(../img/bg.jpg) no-repeat fixed top/cover;
     min-height: 100vh; // fix for too short pages (slideout menu)
     padding: 5vw;
   }
