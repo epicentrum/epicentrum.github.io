@@ -310,6 +310,10 @@ $grey: #4d4d4d;
 }
 
 @media #{$large-up} {
+  header {
+    margin-bottom: rem-calc(48) !important;
+  }
+
   h1 {
     font-size: rem-calc(32);
   }
