@@ -232,6 +232,41 @@ $grey: #4d4d4d;
       color: #000;
     }
   }
+
+  input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: rem-calc(50);
+    padding: rem-calc(15);
+    margin-bottom: rem-calc(15);
+    background-color: #fff;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem-calc(16);
+  }
+
+  textarea {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: rem-calc(180);
+    padding: rem-calc(15);
+    margin-bottom: rem-calc(15);
+    background-color: #fff;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: rem-calc(16);
+  }
+
+  button[type="submit"] {
+    border: none;
+    float: right;
+    margin-right: 0;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }
 
 @media #{$small-only} {
@@ -258,6 +293,10 @@ $grey: #4d4d4d;
   footer p {
     margin: 0 auto;
     text-align: center;
+  }
+
+  button[type="submit"] {
+    width: 100%;
   }
 }
 

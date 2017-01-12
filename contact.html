@@ -61,4 +61,18 @@ layout: default
       <div id="google-map-canvas"></div>
     </div>
   </div>
+
+  <form method="POST" action="http://formspree.io/skn.epicentrum@gmail.com">
+    <div class="row small-collapse large-uncollapse">
+      <div class="large-4 columns">
+        <input type="text" name="first_name" placeholder="Imię" required>
+        <input type="text" name="last_name" placeholder="Nazwisko" required>
+        <input type="email" name="email" placeholder="E-mail" required>
+      </div>
+      <div class="large-8 columns">
+        <textarea name="message" placeholder="Wiadomość" required></textarea>
+        <button type="submit" class="button-filled">Wyślij</button>
+      </div>
+    </div>
+  </form>
 </section>
