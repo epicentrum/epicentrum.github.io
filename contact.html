@@ -71,7 +71,7 @@ layout: default
       </div>
       <div class="large-8 columns">
         <textarea name="message" placeholder="Wiadomość" required></textarea>
-        <button type="submit" class="button-filled">Wyślij</button>
+        <button type="submit" class="button-filled" onClick="ga('send', 'event', { eventCategory: 'Kontakt', eventAction: 'Wysłanie formularza', eventLabel: 'Wiadomość'});">Wyślij</button>
       </div>
     </div>
   </form>
